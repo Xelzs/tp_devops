@@ -18,18 +18,18 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "instance_jenkins_server_asimonet" {
+resource "aws_instance" "instance_jenkins_server_simonet" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   key_name = "tp_dev_ynov"
-  vpc_security_group_ids = [ aws_security_group.security_group_jenkins_asimonet.id ]
+  vpc_security_group_ids = [ aws_security_group.security_group_jenkins_simonet.id ]
 
   tags = {
     Name = var.instance_name
   }
 }
 
-resource "aws_security_group" "security_group_jenkins_asimonet" {
+resource "aws_security_group" "security_group_jenkins_simonet" {
   name = var.security_group_name
   description = "Security Group for Jenkins Server"
   vpc_id      = var.vpc_id

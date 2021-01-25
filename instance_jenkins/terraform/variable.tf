@@ -19,11 +19,11 @@ variable "vpc_id" {
 variable "instance_name" {
   type = string
   description = "Instance Name"
-  default = "instance_jenkins_server_asimonet"
+  default = "instance_jenkins_server_simonet"
 }
 
 variable "security_group_name" {
   type = string
   description = "Security Group Name"
-  default = "security_group_jenkins_asimonet"
+  default = "security_group_jenkins_simonet"
 }
